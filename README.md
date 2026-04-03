@@ -10,6 +10,18 @@ It consists of three main processing modules:
 
 **TreeGeneration.m** - Contains the code for generating the MLNL model. The input is  the tree structure $(D_1,D_2,D_3)$ and the lower and upper bounds of the preference weight parameter $(\underline{U},\overline{U})$. The generated MLNL model is saved as an .xlsx file. 
 
+##
+
+## Reproduction Workflow
+
+To reproduce the results, follow this sequential process:
+
+1. **Performance of Parameter Estimation**: Run ParameterEstimation.m to obtain the L2-norm error results in four cases.
+
+2. **Performance of the Dynamic Assortment Algorithm**:  Firstly, please run TreeGeneration.m to generate the MLNL models with different values of $(D_1,D_2,D_3)$. Then, run CompareTest.m to compare the results of our algorithm with the baseline. The regret are saved as .xlsx files, and results are saved in "res_table.xlsx" file.
+
+3. **Robustness of the Dynamic Assortment Algorithm**:  Run RobustTest.m to obtain the regret of our algorithm under different cases. The results are saved as .xlsx files, and each file contains the results with different $(\underline{U},\overline{U})$.
+
 ## 
 # Nested Logit Simulation
 
